@@ -6,6 +6,8 @@ import './topnav.css'
 
 import Dropdown from '../dropdown/Dropdown'
 
+import ThemeMenu from '../thememenu/ThemeMenu'
+
 import user_image from '../../assets/images/tuat.png'
 
 import notifications from './notification.json'
@@ -32,9 +34,7 @@ const TopNav = () => {
                     <Dropdown icon='bx bx-bell' badge='12' contentData={notifications} renderItems={(item, index) => renderNotificationItem(item, index)} renderFooter={() => <Link to='/'>View all</Link>}/>
                 </TopNavRightItem>
                 <TopNavRightItem>
-                    <button className="dropdown__toggle">
-                        <i className='bx bx-palette' ></i>
-                    </button>
+                    <ThemeMenu/>
                 </TopNavRightItem>
             </div>
         </div>
