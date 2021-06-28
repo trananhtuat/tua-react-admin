@@ -1,0 +1,14 @@
+.layout {
+    display: flex;
+}
+
+.layout__content {
+    flex-grow: 1;
+    /* padding: 30px 30px 30px calc(var(--sidebar-width) + 30px); */
+    padding-left: var(--sidebar-width);
+    background-color: var(--second-bg);
+}
+
+.layout__content-main {
+    padding: 30px;
+}
