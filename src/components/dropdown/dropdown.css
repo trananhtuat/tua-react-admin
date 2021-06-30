@@ -15,7 +15,7 @@
     color: var(--txt-color);
 }
 
-.dropdown__toggle > .badge {
+.dropdown__toggle-badge {
     display: flex;
     align-items: center;
     justify-content: center;

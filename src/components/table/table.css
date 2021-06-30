@@ -1,0 +1,23 @@
+table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+thead {
+    background-color: var(--second-bg);
+}
+
+tr {
+    text-align: left;
+}
+
+th,
+td {
+    text-transform: capitalize;
+    padding: 15px 10px;
+}
+
+tbody > tr:hover {
+    background-color: var(--main-color);
+    color: var(--txt-white);
+}

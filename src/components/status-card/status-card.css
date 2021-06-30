@@ -39,7 +39,11 @@
     width: 100%;
     padding-top: 100%;
     border-radius: 50%;
-    background-color: var(--main-color);
+    background-image: linear-gradient(
+        to top right,
+        var(--main-color),
+        var(--second-color)
+    );
     position: absolute;
     left: -50%;
     top: 0;
@@ -49,6 +53,14 @@
 
 .status-card:hover::before {
     transform: scale(3);
+}
+
+.status-card.active::before {
+    transform: scale(3);
+}
+
+.status-card.active {
+    color: var(--txt-white);
 }
 
 .status-card:hover {

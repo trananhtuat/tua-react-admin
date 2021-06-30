@@ -16,7 +16,7 @@
     --box-shadow-light: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
     --main-bg-dark: #2d2d2d;
-    --second-bg-dark: #3a3a3a;
+    --second-bg-dark: #202020;
     --txt-color-dark: #bbbbbb;
     --box-shadow-dark: rgba(14, 14, 14, 0.2) 0px 5px 15px;
     /* --box-shadow-dark: unset; */
@@ -180,4 +180,18 @@ input:focus {
 
 .card.full-height {
     height: calc(100% - 30px);
+}
+
+.card__header {
+    text-transform: capitalize;
+}
+
+.card__header,
+.card__body {
+    margin-bottom: 30px;
+}
+
+.card__footer {
+    text-align: center;
+    text-transform: capitalize;
 }

@@ -5,15 +5,13 @@ import TopNav from '../topnav/TopNav'
 
 import { BrowserRouter, Route } from 'react-router-dom'
 
-import {useSelector, useDispatch} from 'react-redux'
+import {useDispatch} from 'react-redux'
 
 import ThemeAction from '../../redux/actions/ThemeAction'
 
 import './layout.css'
 
 const Layout = () => {
-
-    let themeReducer = useSelector(state => state.ThemeReducer)
 
     const dispatch = useDispatch()
 
@@ -24,8 +22,8 @@ const Layout = () => {
     useEffect(() => {
         dispatch(ThemeAction.setThemeRef(layoutRef))
         // dispatch(ThemeAction.getThemeMode())
-        console.log(themeReducer.mode)
-    }, [dispatch, themeReducer.mode]);
+        // console.log(themeReducer.mode)
+    }, [dispatch]);
 
     return (
         <BrowserRouter>

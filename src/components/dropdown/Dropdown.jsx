@@ -32,7 +32,7 @@ const Dropdown = props => {
                     props.icon ? <i className={props.icon} ></i> : ''
                 }
                 {
-                    props.badge ? <span className="badge">{props.badge}</span> : ''
+                    props.badge ? <span className="dropdown__toggle-badge">{props.badge}</span> : ''
                 }
                 {
                     props.customToggle ? props.customToggle() : ''
