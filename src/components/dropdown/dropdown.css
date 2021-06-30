@@ -1,5 +1,6 @@
 .dropdown {
     position: relative;
+    z-index: 99;
 }
 
 .dropdown__toggle {
@@ -42,12 +43,12 @@
     overflow: hidden;
     transform-origin: top right;
     transform: scale(0);
-    transition: transform 0s;
+    transition: transform 0.3s ease 0s;
 }
 
 .dropdown__content.active {
     transform: scale(1);
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .dropdown__footer {

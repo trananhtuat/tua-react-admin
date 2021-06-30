@@ -1,5 +1,7 @@
 .layout {
     display: flex;
+    color: var(--txt-color);
+    min-height: 100vh;
 }
 
 .layout__content {

@@ -10,9 +10,9 @@ import ThemeMenu from '../thememenu/ThemeMenu'
 
 import user_image from '../../assets/images/tuat.png'
 
-import notifications from './notification.json'
+import notifications from '../../assets/JsonData/notification.json'
 
-import user_dropdowns from './user_menus.json'
+import user_dropdowns from '../../assets/JsonData/user_menus.json'
 
 const curr_user = {
     display_name: 'Tuat Tran',

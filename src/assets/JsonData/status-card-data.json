@@ -1,0 +1,22 @@
+[
+    {
+        "icon": "bx bx-shopping-bag",
+        "count": "1,995",
+        "title": "Total sales"
+    },
+    {
+        "icon": "bx bx-cart",
+        "count": "2,001",
+        "title": "Daily visits"
+    },
+    {
+        "icon": "bx bx-dollar-circle",
+        "count": "1,711",
+        "title": "Total income"
+    },
+    {
+        "icon": "bx bx-receipt",
+        "count": "1,711",
+        "title": "Total orders"
+    }
+]

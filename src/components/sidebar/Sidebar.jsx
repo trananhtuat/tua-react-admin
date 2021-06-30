@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 
 import './sidebar.css'
 import SidebarItem from './SidebarItem'
@@ -7,55 +7,7 @@ import { Link } from 'react-router-dom'
 
 import logo from '../../assets/images/logo.png'
 
-import sidebar_items from './sidebar_routes.json'
-
-// const sidebar_items = [
-//     {
-//         display_name: 'Dashboard',
-//         route: '/',
-//         icon: 'bx bx-category-alt'
-//     },
-//     {
-//         display_name: 'Customers',
-//         route: '/customers',
-//         icon: 'bx bx-user-pin'
-//     },
-//     {
-//         display_name: 'Products',
-//         route: '/products',
-//         icon: 'bx bx-package'
-//     },
-//     {
-//         display_name: 'Orders',
-//         route: '/orders',
-//         icon: 'bx bx-cart'
-//     },
-//     {
-//         display_name: 'Analytics',
-//         route: '/analytics',
-//         icon: 'bx bx-bar-chart-alt'
-//     },
-//     {
-//         display_name: 'categories',
-//         route: '/categories',
-//         icon: 'bx bx-list-ol'
-//     },
-//     {
-//         display_name: 'discount',
-//         route: '/discount',
-//         icon: 'bx bx-gift'
-//     },
-//     {
-//         display_name: 'inventory',
-//         route: '/inventory',
-//         icon: 'bx bx-store-alt'
-//     },
-//     {
-//         display_name: 'settings',
-//         route: '/settings',
-//         icon: 'bx bx-cog'
-//     },
-// ]
+import sidebar_items from '../../assets/JsonData/sidebar_routes.json'
 
 const Sidebar = (props) => {
 
