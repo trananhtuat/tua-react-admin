@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
 
 import { Link } from 'react-router-dom'
 
@@ -11,6 +11,8 @@ import statusCardJson from '../assets/JsonData/status-card-data.json'
 import StatusCard from '../components/status-card/StatusCard'
 
 import Table from '../components/table/Table'
+
+import Badge from '../components/badge/Badge'
 
 import ThemeAction from '../redux/actions/ThemeAction'
 
@@ -130,9 +132,16 @@ const latestOrders = {
             user: "anthony baker",
             date: "27 Jun 2021",
             price: "$200",
-            status: "pending"
+            status: "refund"
         }
     ]
+}
+
+const orderStatus = {
+    "shipping": "primary",
+    "pending": "warning",
+    "paid": "success",
+    "refund": "danger"
 }
 
 const renderCustomerHead = (item, index) => (
@@ -151,13 +160,17 @@ const renderOrderHead = (item, index) => (
     <th key={index}>{item}</th>
 )
 
+const click = () => console.log('demo')
+
 const renderOrderBody = (item, index) => (
-    <tr key={index}>
+    <tr key={index} onClick={() => click()}>
         <td>{item.id}</td>
         <td>{item.user}</td>
         <td>{item.price}</td>
         <td>{item.date}</td>
-        <td>{item.status}</td>
+        <td>
+            <Badge type={orderStatus[item.status]} content={item.status} />
+        </td>
     </tr>
 )
 

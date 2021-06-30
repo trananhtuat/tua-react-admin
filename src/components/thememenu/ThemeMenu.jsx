@@ -94,7 +94,7 @@ const ThemeMenu = () => {
         dispatch(ThemeAction.getThemeRef())
     }, [dispatch]);
 
-    const setThemeMode = (mode) => {
+    const setThemeMode = mode => {
         // dispatch(ThemeAction.getThemeRef())
         mode_settings.map(item => themeReducer.mode.current.classList.remove(item.class))
         themeReducer.mode.current.classList.add(mode.class)
@@ -102,7 +102,7 @@ const ThemeMenu = () => {
         setcurrMode(mode.id)
     }
 
-    const setColor = (color) => {
+    const setColor = color => {
         // dispatch(ThemeAction.getThemeRef())
         color_settings.map(item => themeReducer.mode.current.classList.remove(item.class))
         themeReducer.mode.current.classList.add(color.class)
