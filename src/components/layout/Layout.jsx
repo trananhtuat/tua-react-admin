@@ -17,12 +17,12 @@ const Layout = () => {
 
     const layoutRef = useRef(null)
 
-    // const currMode = 'theme-mode-dark'
-
     useEffect(() => {
+        const themeClass = localStorage.getItem('themeMode', 'theme-mode-light')
+        const colorClass = localStorage.getItem('colorMode', 'theme-color-blue')
+        layoutRef.current.classList.add(themeClass)
+        layoutRef.current.classList.add(colorClass)
         dispatch(ThemeAction.setThemeRef(layoutRef))
-        // dispatch(ThemeAction.getThemeMode())
-        // console.log(themeReducer.mode)
     }, [dispatch]);
 
     return (

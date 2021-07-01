@@ -1,5 +1,10 @@
+.table-wrapper {
+    overflow-y: auto;
+}
+
 table {
     width: 100%;
+    min-width: 400px;
     border-spacing: 0;
 }
 
@@ -27,6 +32,7 @@ tbody > tr:hover {
     width: 100%;
     justify-content: flex-end;
     align-items: center;
+    margin-top: 20px;
 }
 
 .table__pagination-item ~ .table__pagination-item {

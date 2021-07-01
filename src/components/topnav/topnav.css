@@ -9,7 +9,7 @@
 .topnav__search {
     position: relative;
     height: 50px;
-    width: 600px;
+    /* width: 600px; */
     background-color: var(--main-bg);
     display: flex;
     align-items: center;
@@ -78,4 +78,15 @@
 .topnav__right-user__name {
     font-size: 1rem;
     font-weight: 600;
+}
+
+@media only screen and (max-width: 1280px) {
+    .topnav {
+        padding-left: 50px;
+        justify-content: flex-end;
+    }
+
+    .topnav__search {
+        display: none;
+    }
 }

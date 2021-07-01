@@ -78,13 +78,9 @@ const ThemeMenu = () => {
 
     const closeMenu = () => menu_ref.current.classList.remove('active')
 
-    const curr_theme = 'light'
+    const [currMode, setcurrMode] = useState('light')
 
-    const curr_color = 'blue'
-
-    const [currMode, setcurrMode] = useState(curr_theme)
-
-    const [currColor, setcurrColor] = useState(curr_color)
+    const [currColor, setcurrColor] = useState('blue')
 
     const themeReducer = useSelector(state => state.ThemeReducer)
 
@@ -92,6 +88,18 @@ const ThemeMenu = () => {
 
     useEffect(() => {
         dispatch(ThemeAction.getThemeRef())
+        const themeClass = mode_settings.find(e => e.class === localStorage.getItem('themeMode', 'theme-mode-light'))
+
+        const colorClass = color_settings.find(e => e.class === localStorage.getItem('colorMode', 'theme-color-blue'))
+
+        if (themeClass !== undefined) {
+            setcurrMode(themeClass.id)
+        }
+
+        if (colorClass !== undefined) {
+            setcurrColor(colorClass.id)
+        }
+
     }, [dispatch]);
 
     const setThemeMode = mode => {
@@ -100,6 +108,7 @@ const ThemeMenu = () => {
         themeReducer.mode.current.classList.add(mode.class)
         dispatch(ThemeAction.setThemeRef(themeReducer.mode))
         setcurrMode(mode.id)
+        localStorage.setItem('themeMode', mode.class)
     }
 
     const setColor = color => {
@@ -107,6 +116,7 @@ const ThemeMenu = () => {
         color_settings.map(item => themeReducer.mode.current.classList.remove(item.class))
         themeReducer.mode.current.classList.add(color.class)
         setcurrColor(color.id)
+        localStorage.setItem('colorMode', color.class)
     }
 
     return (

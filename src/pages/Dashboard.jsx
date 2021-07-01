@@ -194,11 +194,11 @@ const Dashboard = () => {
                 Dashboard
             </h2>
             <div className="row">
-                <div className="col-6">
+                <div className="col-6 col-md-12">
                     <div className="row">
                         {
                             statusCardJson.map((item, index) => (
-                                <div className="col-6" key={index}>
+                                <div className="col-6 col-sm-12" key={index}>
                                     <StatusCard 
                                         icon={item.icon}
                                         count={item.count}
@@ -209,7 +209,7 @@ const Dashboard = () => {
                         }
                     </div>
                 </div>
-                <div className="col-6">
+                <div className="col-6 col-md-12">
                     <div className="card full-height">
                         <Chart
                             options={themeReducer.mode && themeReducer.mode.current && themeReducer.mode.current.classList.contains('theme-mode-dark') ?{...options, theme: {mode: 'dark'}} : {...options, theme: {mode: 'light'}}}
@@ -220,7 +220,7 @@ const Dashboard = () => {
                         />
                     </div>
                 </div>
-                <div className="col-4">
+                <div className="col-4 col-md-12">
                     <div className="card">
                         <div className="card__header">
                             <h3>Top customers</h3>
@@ -240,7 +240,7 @@ const Dashboard = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-8">
+                <div className="col-8 col-md-12">
                     <div className="card">
                         <div className="card__header">
                             <h3>latest orders</h3>

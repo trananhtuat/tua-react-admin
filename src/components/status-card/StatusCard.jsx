@@ -5,6 +5,9 @@ import './status-card.css'
 const StatusCard = props => {
     return (
         <div className="status-card">
+        {
+            console.log('StatusCard')
+        }
             <div className="status-card__icon">
                 <i className={props.icon} ></i>
             </div>

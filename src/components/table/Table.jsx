@@ -4,8 +4,6 @@ import './table.css'
 
 const Table = props => {
 
-    const stripe = props.stripe ? 'stripe' : ''
-
     const initDataShow = props.limit ? props.bodyData.slice(0, Number(props.limit)) : props.bodyData
 
     let pages = 1
@@ -38,42 +36,37 @@ const Table = props => {
     }
 
     return (
-        <table className={stripe}>
-            {
-                console.log(currPage)
-            }
-            <thead>
-                <tr>
-                    {
-                        props.headData && props.renderHead ? props.headData.map((item, index) => props.renderHead(item, index)) : ''
-                    }
-                </tr>
-            </thead>
-            <tbody>
-                {
-                    props.bodyData && props.renderBody ? dataShow.map((item, index) => props.renderBody(item, index)) : ''
-                }
-            </tbody>
+        <div>
+            <div className="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            {
+                                props.headData && props.renderHead ? props.headData.map((item, index) => props.renderHead(item, index)) : ''
+                            }
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            props.bodyData && props.renderBody ? dataShow.map((item, index) => props.renderBody(item, index)) : ''
+                        }
+                    </tbody>
+                </table>
+            </div>
             {
                 pages > 1 ? (
-                    <tfoot>
-                        <tr>
-                            <td colSpan={props.headData.length}>
-                                <div className="table__pagination">
-                                    {
-                                        range.map((item, index) => (
-                                            <div className={`table__pagination-item ${currPage === index + 1 ? 'active' : ''}`} key={index} onClick={() => selectPage(index + 1)}>
-                                                {item + 1}
-                                            </div>
-                                        ))
-                                    }
-                                </div>
-                            </td>
-                        </tr>
-                    </tfoot>
-                ) : ''
+                        <div className="table__pagination">
+                            {
+                                range.map((item, index) => (
+                                    <div className={`table__pagination-item ${currPage === index + 1 ? 'active' : ''}`} key={index} onClick={() => selectPage(index + 1)}>
+                                        {item + 1}
+                                    </div>
+                                ))
+                            }
+                        </div>
+                ) : null
             }
-        </table>
+        </div>
     )
 }
 

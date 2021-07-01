@@ -18,7 +18,7 @@
     --main-bg-dark: #2d2d2d;
     --second-bg-dark: #202020;
     --txt-color-dark: #bbbbbb;
-    --box-shadow-dark: rgba(14, 14, 14, 0.2) 0px 5px 15px;
+    --box-shadow-dark: rgba(0, 0, 0, 0.2) 0px 5px 10px;
     /* --box-shadow-dark: unset; */
 
     --main-color-blue: #349eff;
@@ -46,6 +46,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -133,7 +134,7 @@ input:focus {
 }
 
 .dark-background {
-    background-color: var(--main-bg-dark);
+    background-color: var(--second-bg-dark);
     color: #fff;
 }
 
@@ -198,4 +199,10 @@ input:focus {
 .card__footer {
     text-align: center;
     text-transform: capitalize;
+}
+
+@media only screen and (max-width: 1280px) {
+    html {
+        font-size: 13px;
+    }
 }
