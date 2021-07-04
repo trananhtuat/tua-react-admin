@@ -1,19 +1,27 @@
-const setThemeRef = (mode) => {
+const setMode = mode => {
     return {
-        type: 'SET_THEME_MODE',
+        type: 'SET_MODE',
         payload: mode
     }
 }
 
-const getThemeRef = () => {
+const setColor = color => {
     return {
-        type: 'GET_THEME_MODE'
+        type: 'SET_COLOR',
+        payload: color
+    }
+}
+
+const getTheme = () => {
+    return {
+        type: 'GET_THEME'
     }
 }
 
 const exportDefault = {
-    setThemeRef,
-    getThemeRef
+    setColor,
+    setMode,
+    getTheme
 }
 
 export default exportDefault

@@ -7,7 +7,6 @@
     --txt-white: #fff;
     --main-color: #349eff;
     --second-color: #62b4ff;
-
     --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
     --main-bg-light: #ffffff;
@@ -19,7 +18,6 @@
     --second-bg-dark: #202020;
     --txt-color-dark: #bbbbbb;
     --box-shadow-dark: rgba(0, 0, 0, 0.2) 0px 5px 10px;
-    /* --box-shadow-dark: unset; */
 
     --main-color-blue: #349eff;
     --second-color-blue: #62b4ff;
@@ -85,84 +83,6 @@ input:focus {
     border: 2px solid var(--main-color);
 }
 
-.theme-mode-light {
-    --main-bg: #ffffff;
-    --second-bg: #fafafb;
-    --txt-color: #455560;
-    --box-shadow: var(--box-shadow-light);
-}
-
-.theme-mode-light .apexcharts-yaxis-label {
-    color: #000;
-}
-
-.theme-mode-dark {
-    --main-bg: var(--main-bg-dark);
-    --second-bg: var(--second-bg-dark);
-    --txt-color: var(--txt-color-dark);
-    --box-shadow: var(--box-shadow-dark);
-}
-
-.theme-color-blue {
-    --main-color: var(--main-color-blue);
-    --second-color: var(--second-color-blue);
-}
-
-.theme-color-red {
-    --main-color: var(--main-color-red);
-    --second-color: var(--second-color-red);
-}
-
-.theme-color-cyan {
-    --main-color: var(--main-color-cyan);
-    --second-color: var(--second-color-cyan);
-}
-
-.theme-color-green {
-    --main-color: var(--main-color-green);
-    --second-color: var(--second-color-green);
-}
-
-.theme-color-orange {
-    --main-color: var(--main-color-orange);
-    --second-color: var(--second-color-orange);
-}
-
-.light-background {
-    background-color: var(--main-bg-light);
-    color: #000;
-}
-
-.dark-background {
-    background-color: var(--second-bg-dark);
-    color: #fff;
-}
-
-.blue-color {
-    background-color: var(--main-color-blue);
-    color: #fff;
-}
-
-.red-color {
-    background-color: var(--main-color-red);
-    color: #fff;
-}
-
-.cyan-color {
-    background-color: cyan;
-    color: #fff;
-}
-
-.green-color {
-    background-color: green;
-    color: #fff;
-}
-
-.orange-color {
-    background-color: orange;
-    color: #fff;
-}
-
 .page-header {
     margin-bottom: 40px;
     text-transform: capitalize;
@@ -184,15 +104,11 @@ input:focus {
     height: calc(100% - 30px);
 }
 
-.card > div ~ div {
-    margin-top: 30px;
-}
-
 .card__header {
     text-transform: capitalize;
 }
 
-.card__header ~ .card__body {
+.card > div ~ div {
     margin-top: 30px;
 }
 
@@ -201,8 +117,37 @@ input:focus {
     text-transform: capitalize;
 }
 
-@media only screen and (max-width: 1280px) {
-    html {
-        font-size: 13px;
-    }
+.light-background {
+    background-color: var(--main-bg-light);
+    color: #000;
+}
+
+.dark-background {
+    background-color: var(--main-bg-dark);
+    color: #fff;
+}
+
+.blue-color {
+    background-color: var(--main-color-blue);
+    color: #fff;
+}
+
+.red-color {
+    background-color: var(--main-color-red);
+    color: #fff;
+}
+
+.cyan-color {
+    background-color: var(--main-color-cyan);
+    color: #fff;
+}
+
+.green-color {
+    background-color: var(--main-color-green);
+    color: #fff;
+}
+
+.orange-color {
+    background-color: var(--main-color-orange);
+    color: #fff;
 }

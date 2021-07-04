@@ -31,13 +31,12 @@
 }
 
 .dropdown__content {
-    /* display: none; */
     position: absolute;
     top: calc(100% + 5px);
     right: 0;
     width: max-content;
     max-width: 400px;
-    background-color: var(--main-bg);
+    background-color: vaR(--main-bg);
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     overflow: hidden;
@@ -48,12 +47,10 @@
 
 .dropdown__content.active {
     transform: scale(1);
-    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.5s var(--transition-cubic);
 }
 
 .dropdown__footer {
-    /* display: flex; */
-    /* align-items: center; */
     padding: 20px;
     text-align: center;
 }

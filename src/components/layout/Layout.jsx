@@ -1,34 +1,37 @@
-import React, {useEffect, useRef} from 'react'
-import Sidebar from '../sidebar/Sidebar'
-import Routes from '../Routes'
-import TopNav from '../topnav/TopNav'
-
-import { BrowserRouter, Route } from 'react-router-dom'
-
-import {useDispatch} from 'react-redux'
-
-import ThemeAction from '../../redux/actions/ThemeAction'
+import React, {useEffect} from 'react'
 
 import './layout.css'
 
+import Sidebar from '../sidebar/Sidebar'
+import TopNav from '../topnav/TopNav'
+import Routes from '../Routes'
+
+import { BrowserRouter, Route } from 'react-router-dom'
+
+import { useSelector, useDispatch } from 'react-redux'
+
+import ThemeAction from '../../redux/actions/ThemeAction'
+
 const Layout = () => {
+
+    const themeReducer = useSelector(state => state.ThemeReducer)
 
     const dispatch = useDispatch()
 
-    const layoutRef = useRef(null)
-
     useEffect(() => {
         const themeClass = localStorage.getItem('themeMode', 'theme-mode-light')
-        const colorClass = localStorage.getItem('colorMode', 'theme-color-blue')
-        layoutRef.current.classList.add(themeClass)
-        layoutRef.current.classList.add(colorClass)
-        dispatch(ThemeAction.setThemeRef(layoutRef))
-    }, [dispatch]);
+
+        const colorClass = localStorage.getItem('colorMode', 'theme-mode-light')
+
+        dispatch(ThemeAction.setMode(themeClass))
+
+        dispatch(ThemeAction.setColor(colorClass))
+    }, [dispatch])
 
     return (
         <BrowserRouter>
-            <Route render={(props)=>(
-                <div ref={layoutRef} className="layout">
+            <Route render={(props) => (
+                <div className={`layout ${themeReducer.mode} ${themeReducer.color}`}>
                     <Sidebar {...props}/>
                     <div className="layout__content">
                         <TopNav/>
@@ -39,7 +42,6 @@ const Layout = () => {
                 </div>
             )}/>
         </BrowserRouter>
-        
     )
 }
 

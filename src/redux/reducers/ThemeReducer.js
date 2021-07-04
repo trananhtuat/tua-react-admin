@@ -1,12 +1,15 @@
 const ThemeReducer = (state = {}, action) => {
     switch(action.type) {
-        case 'SET_THEME_MODE':
+        case 'SET_MODE':
             return {
                 ...state,
                 mode: action.payload
             }
-        case 'GET_THEME_MODE':
-            return state
+        case 'SET_COLOR':
+            return {
+                ...state,
+                color: action.payload
+            }
         default:
             return state
     }
